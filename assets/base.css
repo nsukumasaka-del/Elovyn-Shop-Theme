@@ -26,8 +26,6 @@ body {
 }
 
 html {
-  margin: 0;
-  padding: 0;
   /* Firefox */
   scrollbar-width: thin;
   scrollbar-color: rgb(var(--color-foreground-rgb) / var(--opacity-40)) var(--color-background);
@@ -379,9 +377,6 @@ p:empty {
 /* Layout */
 .content-for-layout {
   flex: 1;
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
 }
 
 /* Set up page widths & margins */
@@ -422,11 +417,6 @@ p:empty {
 .page-width-content {
   --page-content-width: var(--normal-content-width);
   --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
-}
-
-/* Remove white space on top and right (full-bleed, no side margins) */
-body {
-  --page-margin: 0 !important;
 }
 
 /* Section width full vs. page
