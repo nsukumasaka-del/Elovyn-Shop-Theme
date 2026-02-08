@@ -1057,6 +1057,7 @@ body:has(.header[transparent]) #header-group > *:not(.header-section) {
 
 .product-grid__item {
   border: var(--product-card-border-width) solid rgb(var(--color-border-rgb) / var(--product-card-border-opacity));
+  overflow: visible;
 }
 
 .product-grid--organic[product-grid-view='default'] .product-grid__item {
@@ -1073,6 +1074,17 @@ body:has(.header[transparent]) #header-group > *:not(.header-section) {
   padding-block: var(--padding-block-start) var(--padding-block-end);
   padding-inline: var(--padding-inline-start) var(--padding-inline-end);
   overflow: visible;
+}
+
+/* Prevent price (e.g. "R" for Rand) from being cut off on product cards */
+.product-grid__card product-price,
+.product-grid__card product-price > * {
+  overflow: visible;
+}
+
+.product-grid__card product-price {
+  min-width: min-content;
+  padding-inline-start: 0.15em;
 }
 
 [product-grid-view='zoom-out'] .product-grid__card {
@@ -1230,6 +1242,14 @@ results-list[initialized] {
 :is(.product-grid__item, .resource-list__item) .product-card {
   display: grid;
   height: 100%;
+  overflow: visible;
+}
+
+/* Single component wraps image + price: prevent clipping/zooming of both */
+.product-card .product-card__content,
+.product-grid__card .group-block,
+.product-grid__card .group-block-content {
+  overflow: visible;
 }
 
 /* Video background */
