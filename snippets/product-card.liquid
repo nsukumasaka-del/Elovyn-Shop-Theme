@@ -52,11 +52,6 @@
   if product.id == empty or product == blank
     assign onboarding = true
   endif
-
-  assign card_href = link_override | default: ''
-  if card_href == ''
-    assign card_href = variant_to_link.url
-  endif
 %}
 
 {%- if settings.transition_to_main_product -%}
@@ -82,8 +77,7 @@
   <a
     id="{{ product_card_id | md5 }}"
     {% unless onboarding %}
-      href="{{ card_href }}"
-      {% if link_override != blank %}target="_blank" rel="noopener noreferrer"{% endif %}
+      href="{{ variant_to_link.url }}"
     {% endunless %}
     class="product-card__link"
     ref="productCardLink"

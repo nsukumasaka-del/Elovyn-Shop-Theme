@@ -27,7 +27,8 @@
       {%- endif -%}
     </div>
     {%  if settings.quick_add or settings.mobile_quick_add %}
-      {% render 'quick-add', product: product, section_id: section.id %}
+      {% assign add_to_cart_link_override = product_card_link_override | default: '' %}
+      {% render 'quick-add', product: product, section_id: section.id, add_to_cart_link_override: add_to_cart_link_override %}
     {% endif %}
   {% endunless %}
 {% endcapture %}

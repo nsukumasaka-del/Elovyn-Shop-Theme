@@ -2,14 +2,13 @@
 
 {% liquid
   assign product = closest.product
-  assign link_override = product_card_link_override | default: ''
 -%}
 
 {% capture children %}
   {% content_for 'blocks', closest.product: product %}
 {% endcapture %}
 
-{% render 'product-card', children: children, product: product, link_override: link_override %}
+{% render 'product-card', children: children, product: product %}
 
 {% schema %}
 {
