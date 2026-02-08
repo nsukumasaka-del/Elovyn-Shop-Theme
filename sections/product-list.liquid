@@ -28,8 +28,8 @@
     {% if section.settings.collection != blank and shop.products_count != 0 %}
       {% paginate section.settings.collection.products by max_items %}
         {% for product in section.settings.collection.products limit: max_items %}
-          {% if forloop.index == 2 %}
-            {% assign product_card_link_override = 'https://amzn.to/4kl3Pxo' %}
+          {% if product.title == "Men's Athletic Fit Tee" %}
+            {% assign product_card_link_override = 'https://amzn.to/3O2WeaS' %}
           {% else %}
             {% assign product_card_link_override = '' %}
           {% endif %}
