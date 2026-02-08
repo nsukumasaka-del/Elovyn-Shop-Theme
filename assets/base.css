@@ -700,6 +700,18 @@ body {
   pointer-events: none;
 }
 
+/* Logo on the left (desktop and mobile) */
+.header__column--left .header-logo {
+  justify-self: start;
+}
+
+@media screen and (max-width: 749px) {
+  .header__columns .header-logo {
+    grid-area: leftB;
+    justify-self: start;
+  }
+}
+
 /* Enlarge hero so its background image extends under the announcement bar */
 .hero-wrapper.section-wrapper:first-of-type {
   margin-top: -52px;
