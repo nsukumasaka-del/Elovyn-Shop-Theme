@@ -424,7 +424,7 @@ p:empty {
   --page-width: calc(var(--page-content-width) + (var(--page-margin) * 2));
 }
 
-/* Remove white space on top and right: no side margins (full-bleed) */
+/* Remove white space on top and right (full-bleed, no side margins) */
 body {
   --page-margin: 0 !important;
 }
@@ -698,18 +698,6 @@ body {
 #header-group .announcement-bar__slider .slideshow-control {
   visibility: hidden;
   pointer-events: none;
-}
-
-/* Logo on the left (desktop and mobile) */
-.header__column--left .header-logo {
-  justify-self: start;
-}
-
-@media screen and (max-width: 749px) {
-  .header__columns .header-logo {
-    grid-area: leftB;
-    justify-self: start;
-  }
 }
 
 /* Enlarge hero so its background image extends under the announcement bar */
