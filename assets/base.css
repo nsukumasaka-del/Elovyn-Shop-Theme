@@ -689,6 +689,12 @@ p:empty {
   pointer-events: none;
 }
 
+/* Enlarge hero so its background image extends under the announcement bar */
+.hero-wrapper.section-wrapper:first-of-type {
+  margin-top: -52px;
+  --hero-height-offset: calc(var(--header-group-height, 0px) - 52px);
+}
+
 .text-left {
   --text-align: left;
 
