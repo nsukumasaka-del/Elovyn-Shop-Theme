@@ -1,0 +1,8 @@
+{
+  "name": "elovyn-shop",
+  "private": true,
+  "scripts": {
+    "dev": "shopify theme dev",
+    "dev:store": "shopify theme dev --store=%SHOPIFY_STORE%"
+  }
+}
