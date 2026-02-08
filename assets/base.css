@@ -669,6 +669,26 @@ p:empty {
   box-shadow: 0 0 0 var(--focus-outline-offset) var(--color-background);
 }
 
+/* Transparent announcement bar: hero background shows through, no visible text */
+#header-group .announcement-bar,
+#header-group .announcement-bar .section-background {
+  background: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+}
+
+#header-group .announcement-bar {
+  border-block-end-width: 0 !important;
+  padding-block-start: 8px !important;
+  padding-block-end: 8px !important;
+}
+
+#header-group .announcement-bar__slides,
+#header-group .announcement-bar__slider .slideshow-control {
+  visibility: hidden;
+  pointer-events: none;
+}
+
 .text-left {
   --text-align: left;
 
