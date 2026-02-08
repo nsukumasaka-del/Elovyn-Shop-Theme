@@ -384,12 +384,6 @@ p:empty {
   max-width: 100%;
 }
 
-#header-group {
-  margin: 0;
-  padding: 0;
-  max-width: 100%;
-}
-
 /* Set up page widths & margins */
 .page-width-wide,
 .page-width-normal,
