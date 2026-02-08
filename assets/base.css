@@ -3752,6 +3752,34 @@ slideshow-arrows .slideshow-control.slideshow-control--style-none {
   text-decoration: none;
 }
 
+/* Modern product grid: smaller cards, centered (ideal for 3 products) */
+.section-resource-list .resource-list--grid {
+  max-width: 960px;
+  margin-inline: auto;
+}
+
+.section-resource-list .resource-list__item .product-card {
+  border-radius: 16px;
+  overflow: hidden;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 2px 12px rgb(0 0 0 / 0.06);
+}
+
+.section-resource-list .resource-list__item .product-card:hover {
+  box-shadow: 0 8px 28px rgb(0 0 0 / 0.1);
+  transform: translateY(-2px);
+}
+
+.section-resource-list .resource-list__item .product-grid__card {
+  border-radius: 16px;
+  padding: 12px;
+}
+
+.section-resource-list .resource-list__item .card-gallery {
+  border-radius: 12px;
+  overflow: hidden;
+}
+
 .resource-list__carousel {
   --slide-width: 60vw;
 
