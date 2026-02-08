@@ -1,4 +1,5 @@
 * {
+  
   box-sizing: border-box;
 }
 
@@ -1560,6 +1561,16 @@ shopify-accelerated-checkout-cart {
   :is(shopify-accelerated-checkout, shopify-accelerated-checkout-cart) {
   --shopify-accelerated-checkout-button-border-radius: var(--style-border-radius-buttons-secondary);
   --shopify-accelerated-checkout-button-block-size: var(--height-buy-buttons);
+}
+
+/* Add to cart button text color */
+.add-to-cart-button,
+.add-to-cart-button .add-to-cart-text,
+.add-to-cart-button .add-to-cart-text__content,
+.quick-add__button,
+.quick-add__button .add-to-cart-text,
+.quick-add__button .add-to-cart-text__content {
+  color: #000;
 }
 
 /* Collapsible row */
