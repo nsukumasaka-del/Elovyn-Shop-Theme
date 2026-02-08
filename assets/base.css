@@ -1072,7 +1072,7 @@ body:has(.header[transparent]) #header-group > *:not(.header-section) {
   color: var(--color, var(--color-foreground));
   padding-block: var(--padding-block-start) var(--padding-block-end);
   padding-inline: var(--padding-inline-start) var(--padding-inline-end);
-  overflow: hidden;
+  overflow: visible;
 }
 
 [product-grid-view='zoom-out'] .product-grid__card {
@@ -1715,9 +1715,26 @@ media-gallery.media-gallery--grid .media-gallery__grid .product-media-container 
   }
 }
 
-/* Card gallery: show full product image instead of cropping (avoid zoomed-in look) */
-.card-gallery .product-media-container img {
-  object-fit: contain;
+/* Show full images (no crop/zoom) so faces and products display clearly */
+.card-gallery .product-media-container img,
+.card-gallery .product-media__image,
+.card-gallery .product-media-container .product-media__image {
+  object-fit: contain !important;
+  object-position: center center;
+}
+
+/* Hero: show full main image */
+.hero .hero__image,
+.hero .hero__video,
+.hero .hero__video-poster {
+  object-fit: contain !important;
+  object-position: center center;
+}
+
+/* Product page gallery: show full product images */
+.media-gallery .product-media-container img,
+.media-gallery .product-media__image {
+  object-fit: contain !important;
   object-position: center center;
 }
 
